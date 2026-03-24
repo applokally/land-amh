@@ -178,7 +178,7 @@ export default function HomePage() {
       </main>
 
       {leadModalOpen && (
-        <div className="fixed inset-0 z-[300] flex items-center justify-center p-4 md:p-6">
+        <div className="fixed inset-0 z-[300] flex items-center justify-center p-2 sm:p-4 md:p-6">
           <button
             type="button"
             onClick={closeLeadModal}
@@ -186,15 +186,15 @@ export default function HomePage() {
             aria-label="Fechar popup"
           />
 
-          <div className="relative z-[1] flex h-auto w-full max-w-[1440px] flex-col overflow-hidden rounded-[30px] border border-white/10 bg-[#0d120c] shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
-            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 md:px-7">
-              <div className="min-w-0">
-                <p className="text-[11px] uppercase tracking-[0.32em] text-[#d3bf7a]">
+          <div className="relative z-[1] flex h-auto w-full max-w-[1460px] flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#0d120c] shadow-[0_30px_120px_rgba(0,0,0,0.45)] sm:rounded-[30px]">
+            <div className="flex items-start justify-between gap-3 border-b border-white/10 px-4 py-4 sm:items-center sm:px-5 md:px-7">
+              <div className="min-w-0 pr-2">
+                <p className="text-[10px] uppercase tracking-[0.26em] text-[#d3bf7a] sm:text-[11px] sm:tracking-[0.32em]">
                   {locale === "ar"
                     ? "نموذج الشريك المؤهل"
                     : "Qualified Partner Form"}
                 </p>
-                <p className="mt-2 truncate text-sm text-white/65">
+                <p className="mt-2 truncate text-xs text-white/65 sm:text-sm">
                   {leadModalSource} — {leadModalInterest}
                 </p>
               </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
               <button
                 type="button"
                 onClick={closeLeadModal}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/6 text-white/80 transition-all duration-300 hover:border-[#d3bf7a]/50 hover:bg-white/10 hover:text-white"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/14 bg-white/8 text-white transition-all duration-300 hover:border-[#d3bf7a]/50 hover:bg-white/12 hover:text-white"
                 aria-label="Fechar popup"
               >
                 <svg

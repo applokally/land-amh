@@ -262,23 +262,23 @@ export default function FinalCTA({
   };
 
   const formCard = (
-    <div className="overflow-visible rounded-[30px] border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.08)_100%)] shadow-[0_24px_80px_rgba(0,0,0,0.14)] backdrop-blur-[18px]">
-      <div className="border-b border-white/10 px-6 py-5">
+    <div className="overflow-visible rounded-[26px] border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.08)_100%)] shadow-[0_24px_80px_rgba(0,0,0,0.14)] backdrop-blur-[18px] sm:rounded-[30px]">
+      <div className="border-b border-white/10 px-5 py-4 sm:px-6 sm:py-5">
         <div
-          className={`flex items-center justify-between gap-4 ${
+          className={`flex items-center justify-between gap-3 sm:gap-4 ${
             isArabic ? "flex-row-reverse" : ""
           }`}
         >
-          <div className="text-[11px] uppercase tracking-[0.28em] text-white/54">
+          <div className="text-[10px] uppercase tracking-[0.24em] text-white/54 sm:text-[11px] sm:tracking-[0.28em]">
             American Magic Hair
           </div>
-          <div className="rounded-full border border-[#d8ca8a]/35 bg-[#d8ca8a]/10 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-[#efe2a8]">
+          <div className="rounded-full border border-[#d8ca8a]/35 bg-[#d8ca8a]/10 px-3 py-2 text-[9px] uppercase tracking-[0.18em] text-[#efe2a8] sm:text-[10px] sm:tracking-[0.2em]">
             {text.formTitle}
           </div>
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="grid gap-4 p-6">
+      <form onSubmit={handleSubmit} className="grid gap-4 p-5 sm:p-6">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="grid gap-2">
             <label className="text-[10px] uppercase tracking-[0.24em] text-white/54">
@@ -481,7 +481,7 @@ export default function FinalCTA({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_20%,rgba(255,255,255,0.05),transparent_20%),radial-gradient(circle_at_84%_18%,rgba(186,210,150,0.10),transparent_18%),radial-gradient(circle_at_82%_78%,rgba(255,255,255,0.04),transparent_16%)]" />
 
           <div
-            className={`relative z-[2] flex min-h-[720px] items-center px-6 py-6 md:px-8 md:py-8 lg:px-10 ${
+            className={`relative z-[2] flex min-h-[720px] items-center px-3 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-10 ${
               isArabic ? "justify-end" : "justify-start"
             }`}
           >
@@ -490,7 +490,7 @@ export default function FinalCTA({
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.75, ease, delay: 0.04 }}
-              className="w-full max-w-[520px]"
+              className="w-full max-w-[560px]"
             >
               {formCard}
             </motion.div>
@@ -504,7 +504,7 @@ export default function FinalCTA({
     <section
       id="final-cta"
       dir={isArabic ? "rtl" : "ltr"}
-      className="relative overflow-hidden bg-[#f5f6f1] px-6 py-20 md:px-10 lg:px-16 lg:py-28"
+      className="relative overflow-hidden bg-[#f5f6f1] px-4 py-16 sm:px-6 sm:py-20 md:px-10 lg:px-16 lg:py-28"
     >
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
@@ -527,7 +527,7 @@ export default function FinalCTA({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.85, ease, delay: 0.06 }}
-              className="mt-8 max-w-[760px] text-[46px] leading-[0.95] tracking-[-0.06em] text-[#171717] sm:text-[60px] md:text-[78px] lg:text-[92px]"
+              className="mt-8 max-w-[760px] text-[36px] leading-[0.95] tracking-[-0.06em] text-[#171717] sm:text-[46px] md:text-[78px] lg:text-[92px]"
             >
               <span className="block font-medium">{text.titleTop}</span>
               <span className="mt-1 block font-light italic text-[#47513a]/82">
@@ -542,7 +542,7 @@ export default function FinalCTA({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.9, ease, delay: 0.12 }}
-              className="max-w-[620px] text-[20px] leading-[1.9] text-black/68 md:text-[22px] lg:mt-16"
+              className="max-w-[620px] text-[18px] leading-[1.8] text-black/68 sm:text-[20px] md:text-[22px] lg:mt-16"
             >
               {text.text}
             </motion.p>
@@ -564,7 +564,7 @@ export default function FinalCTA({
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-[38px] min-h-[760px] lg:min-h-[760px]">
+        <div className="relative min-h-[760px] overflow-hidden rounded-[30px] sm:rounded-[38px] lg:min-h-[760px]">
           <div className="absolute inset-0">
             <Image
               src="/botanic_form.png"
@@ -579,7 +579,7 @@ export default function FinalCTA({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_22%,rgba(255,255,255,0.06),transparent_22%),radial-gradient(circle_at_56%_30%,rgba(186,210,150,0.10),transparent_20%),radial-gradient(circle_at_80%_76%,rgba(255,255,255,0.05),transparent_18%)]" />
 
           <div
-            className={`relative z-[2] flex min-h-[760px] items-start px-8 py-8 md:px-10 md:py-10 lg:px-14 lg:py-14 ${
+            className={`relative z-[2] flex min-h-[760px] items-start px-3 py-4 sm:px-6 sm:py-6 md:px-10 md:py-10 lg:px-14 lg:py-14 ${
               isArabic ? "justify-end" : "justify-start"
             }`}
           >
@@ -588,7 +588,7 @@ export default function FinalCTA({
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.9, ease, delay: 0.08 }}
-              className="w-full max-w-[520px]"
+              className="w-full max-w-[560px]"
             >
               {formCard}
             </motion.div>
