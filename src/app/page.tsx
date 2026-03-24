@@ -95,11 +95,7 @@ export default function HomePage() {
     <>
       <main className="relative min-h-screen bg-[#ece9e3]">
         <div className="fixed top-0 left-0 right-0 z-[100] w-full">
-          <Header
-            locale={locale}
-            onChangeLocale={setLocale}
-            ctaLabel={text.cta}
-          />
+          <Header locale={locale} onChangeLocale={setLocale} />
         </div>
 
         <Hero
@@ -225,7 +221,7 @@ export default function HomePage() {
               </button>
             </div>
 
-            <div className="relative bg-[#f5f6f1] overflow-hidden">
+            <div className="relative overflow-hidden bg-[#f5f6f1]">
               <FinalCTA
                 locale={locale}
                 variant="modal"

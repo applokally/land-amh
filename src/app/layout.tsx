@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "American Magic Hair | International Expansion",
-  description:
-    "International landing page for investor and strategic partner lead generation in the Middle East.",
+  title: "American Magic Hair",
+  description: "American Magic Hair international landing page.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
