@@ -186,7 +186,7 @@ export default function HomePage() {
             aria-label="Fechar popup"
           />
 
-          <div className="relative z-[1] flex h-auto w-full max-w-[1460px] flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#0d120c] shadow-[0_30px_120px_rgba(0,0,0,0.45)] sm:rounded-[30px]">
+          <div className="relative z-[1] flex max-h-[94dvh] w-full max-w-[1460px] flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#0d120c] shadow-[0_30px_120px_rgba(0,0,0,0.45)] sm:max-h-[92vh] sm:rounded-[30px]">
             <div className="flex items-start justify-between gap-3 border-b border-white/10 px-4 py-4 sm:items-center sm:px-5 md:px-7">
               <div className="min-w-0 pr-2">
                 <p className="text-[10px] uppercase tracking-[0.26em] text-[#d3bf7a] sm:text-[11px] sm:tracking-[0.32em]">
@@ -221,7 +221,7 @@ export default function HomePage() {
               </button>
             </div>
 
-            <div className="relative overflow-hidden bg-[#f5f6f1]">
+            <div className="relative overflow-y-auto overflow-x-hidden bg-[#f5f6f1] overscroll-contain">
               <FinalCTA
                 locale={locale}
                 variant="modal"
