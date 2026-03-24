@@ -57,6 +57,8 @@ const copy = {
   },
 } as const;
 
+const framerEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -70,7 +72,7 @@ const fadeUpEssentia = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.9, ease: framerEase },
   },
 };
 
@@ -128,13 +130,13 @@ export default function TrustStrip({
 
       <section
         id="trust-strip"
-        className="relative w-full bg-gradient-to-b from-[#160e05] via-[#160e05] to-[#F5F5F3] text-white overflow-clip"
+        className="relative w-full overflow-clip bg-gradient-to-b from-[#160e05] via-[#160e05] to-[#F5F5F3] text-white"
         dir={isArabic ? "rtl" : "ltr"}
       >
-        <div className="absolute top-0 left-1/4 h-[800px] w-[800px] -translate-y-1/2 rounded-full bg-[#e8d08d]/[0.04] blur-[150px] pointer-events-none" />
+        <div className="pointer-events-none absolute top-0 left-1/4 h-[800px] w-[800px] -translate-y-1/2 rounded-full bg-[#e8d08d]/[0.04] blur-[150px]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col px-6 lg:flex-row lg:items-start lg:gap-20 lg:px-12 xl:gap-32">
-          <div className="flex-1 w-full py-20 lg:py-40">
+          <div className="w-full flex-1 py-20 lg:py-40">
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -154,14 +156,14 @@ export default function TrustStrip({
 
               <motion.h2
                 variants={fadeUpEssentia}
-                className="text-balance text-4xl font-normal leading-[1.1] text-white sm:text-5xl lg:text-[56px] mb-8"
+                className="mb-8 text-balance text-4xl font-normal leading-[1.1] text-white sm:text-5xl lg:text-[56px]"
               >
                 {text.headline}
               </motion.h2>
 
               <motion.p
                 variants={fadeUpEssentia}
-                className="text-lg md:text-xl font-light tracking-wide text-white/60 leading-relaxed mb-12"
+                className="mb-12 text-lg font-light leading-relaxed tracking-wide text-white/60 md:text-xl"
               >
                 {text.intro}
               </motion.p>
@@ -181,17 +183,17 @@ export default function TrustStrip({
                 {text.chapters.map((chapter) => (
                   <div
                     key={chapter.number}
-                    className="flex flex-col md:flex-row gap-6 md:gap-12 py-10 border-b border-white/10 group"
+                    className="group flex flex-col gap-6 border-b border-white/10 py-10 md:flex-row md:gap-12"
                   >
-                    <span className="text-5xl font-light text-white/10 group-hover:text-[#e8d08d] transition-colors duration-500">
+                    <span className="text-5xl font-light text-white/10 transition-colors duration-500 group-hover:text-[#e8d08d]">
                       {chapter.number}
                     </span>
 
-                    <div className="flex flex-col gap-3 mt-1 md:mt-2">
-                      <h3 className="text-xl md:text-2xl font-normal uppercase tracking-wide text-white/90 group-hover:text-white transition-colors duration-500">
+                    <div className="mt-1 flex flex-col gap-3 md:mt-2">
+                      <h3 className="text-xl font-normal uppercase tracking-wide text-white/90 transition-colors duration-500 group-hover:text-white md:text-2xl">
                         {chapter.title}
                       </h3>
-                      <p className="text-base md:text-lg font-light leading-relaxed text-white/50 group-hover:text-white/70 transition-colors duration-500">
+                      <p className="text-base font-light leading-relaxed text-white/50 transition-colors duration-500 group-hover:text-white/70 md:text-lg">
                         {chapter.text}
                       </p>
                     </div>
@@ -218,14 +220,14 @@ export default function TrustStrip({
             </motion.div>
           </div>
 
-          <div className="w-full lg:w-[420px] flex items-center justify-center pb-20 lg:pb-0 lg:sticky lg:top-0 lg:h-screen">
+          <div className="flex w-full items-center justify-center pb-20 lg:sticky lg:top-0 lg:h-screen lg:w-[420px] lg:pb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 40 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
                 duration: 1,
-                ease: [0.16, 1, 0.3, 1],
+                ease: framerEase,
                 delay: 0.2,
               }}
               className="relative w-full max-w-[340px] xl:max-w-[380px]"
@@ -267,7 +269,7 @@ export default function TrustStrip({
                   />
                 </AnimatePresence>
 
-                <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/70 to-transparent pointer-events-none" />
+                <div className="pointer-events-none absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/70 to-transparent" />
               </div>
 
               <div className="absolute top-[-5%] right-[-10%] -z-10 h-[50%] w-[50%] rounded-full bg-[#e8d08d]/10 blur-[100px]" />
@@ -294,7 +296,7 @@ function PremiumButton({
       onClick={onClick}
       className="group relative flex w-max cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-[1.04]"
     >
-      <div className="absolute left-1/2 top-1/2 h-[calc(100%+16px)] w-[calc(100%+16px)] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#e8d08d] bg-[#e8d08d]/10 animate-[borderFade_2.5s_ease-in-out_infinite]" />
+      <div className="absolute top-1/2 left-1/2 h-[calc(100%+16px)] w-[calc(100%+16px)] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#e8d08d] bg-[#e8d08d]/10 animate-[borderFade_2.5s_ease-in-out_infinite]" />
       <div className="absolute inset-0 rounded-full bg-[linear-gradient(89deg,#8E8E8E,#3C3C3C,#8E8E8E,#3C3C3C)] bg-[length:400%_200%] animate-[textura_2s_ease_infinite]" />
       <div className="relative z-10 flex items-center gap-3 whitespace-nowrap px-8 py-4 text-sm font-bold uppercase tracking-widest text-white">
         <span>{label}</span>

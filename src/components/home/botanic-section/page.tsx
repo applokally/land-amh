@@ -59,7 +59,7 @@ const copy = {
   },
 } as const;
 
-const framerEasing = [0.16, 1, 0.3, 1];
+const framerEasing: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function BotanicSection({
   locale = "en",
@@ -90,13 +90,13 @@ export default function BotanicSection({
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 flex flex-col pt-[20vh] pb-[25vh] px-6 lg:px-16 z-10 gap-32">
+        <div className="z-10 flex w-full flex-col gap-32 px-6 pt-[20vh] pb-[25vh] lg:w-1/2 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ margin: "-20% 0px -20% 0px", once: false }}
             transition={{ duration: 1, ease: framerEasing }}
-            className="flex flex-col gap-6 w-full max-w-[500px]"
+            className="flex w-full max-w-[500px] flex-col gap-6"
           >
             <div className="inline-flex items-center gap-4">
               <span className="h-[1px] w-8 bg-[#b59842]" />
@@ -104,10 +104,10 @@ export default function BotanicSection({
                 {text.eyebrow}
               </span>
             </div>
-            <h2 className="text-5xl lg:text-[64px] font-normal uppercase leading-[1.05] tracking-tight text-white whitespace-pre-line drop-shadow-md">
+            <h2 className="whitespace-pre-line text-5xl font-normal uppercase leading-[1.05] tracking-tight text-white drop-shadow-md lg:text-[64px]">
               {text.headline}
             </h2>
-            <p className="text-lg md:text-xl font-light tracking-wide text-white/80 leading-relaxed mt-2 drop-shadow-sm">
+            <p className="mt-2 text-lg font-light leading-relaxed tracking-wide text-white/80 drop-shadow-sm md:text-xl">
               {text.intro}
             </p>
           </motion.div>
@@ -124,18 +124,18 @@ export default function BotanicSection({
                   ease: framerEasing,
                   delay: index * 0.1,
                 }}
-                className="flex flex-col gap-3 w-full max-w-[500px]"
+                className="flex w-full max-w-[500px] flex-col gap-3"
               >
-                <div className="flex items-baseline gap-4 mb-2">
+                <div className="mb-2 flex items-baseline gap-4">
                   <span className="text-2xl font-light tracking-widest text-[#b59842]">
                     {feature.id}
                   </span>
                   <span className="h-[1px] w-12 bg-[#b59842]/40" />
                 </div>
-                <h3 className="text-3xl lg:text-4xl font-normal tracking-wide text-white drop-shadow-md">
+                <h3 className="text-3xl font-normal tracking-wide text-white drop-shadow-md lg:text-4xl">
                   {feature.title}
                 </h3>
-                <p className="text-lg font-light text-white/70 leading-relaxed mt-2 drop-shadow-sm">
+                <p className="mt-2 text-lg font-light leading-relaxed text-white/70 drop-shadow-sm">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -157,18 +157,18 @@ export default function BotanicSection({
           </motion.div>
         </div>
 
-        <div className="hidden lg:flex w-1/2 h-screen sticky top-0 items-center justify-center p-8 lg:p-12 z-0 pointer-events-none">
+        <div className="pointer-events-none z-0 hidden h-screen w-1/2 items-center justify-center p-8 lg:sticky lg:top-0 lg:flex lg:p-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: framerEasing }}
-            className="relative w-full h-full flex items-center justify-center"
+            className="relative flex h-full w-full items-center justify-center"
           >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#b59842] opacity-[0.08] blur-[120px] rounded-full" />
+            <div className="absolute top-1/2 left-1/2 h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#b59842] opacity-[0.08] blur-[120px]" />
             <img
               src="/botanic_amazonia.png"
               alt="Botanic Smoothing System"
-              className="relative z-10 w-full max-w-[550px] max-h-[85vh] object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+              className="relative z-10 max-h-[85vh] w-full max-w-[550px] object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
             />
           </motion.div>
         </div>
@@ -190,9 +190,9 @@ function PremiumButton({
     <button
       type="button"
       onClick={onClick}
-      className="group relative flex w-max cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-[1.04] pointer-events-auto"
+      className="group pointer-events-auto relative flex w-max cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-[1.04]"
     >
-      <div className="absolute left-1/2 top-1/2 h-[calc(100%+16px)] w-[calc(100%+16px)] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#b59842] bg-[#b59842]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute top-1/2 left-1/2 h-[calc(100%+16px)] w-[calc(100%+16px)] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#b59842] bg-[#b59842]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div
         className="absolute inset-0 rounded-full bg-[linear-gradient(89deg,#8E8E8E,#3C3C3C,#8E8E8E,#3C3C3C)] bg-[length:400%_200%]"
         style={{ animation: "textura 2s ease infinite" }}
