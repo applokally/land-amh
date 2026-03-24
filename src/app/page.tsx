@@ -194,9 +194,6 @@ export default function HomePage() {
                     ? "نموذج الشريك المؤهل"
                     : "Qualified Partner Form"}
                 </p>
-                <p className="mt-2 truncate text-xs text-white/65 sm:text-sm">
-                  {leadModalSource} — {leadModalInterest}
-                </p>
               </div>
 
               <button
