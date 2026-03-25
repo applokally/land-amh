@@ -18,7 +18,7 @@ export const homeContent: HomeContent = {
     en: {
       eyebrow: "",
       title:
-        "The power of Brazilian Amazon extracts, in luxury salons across the Middle East.",
+        "The power of Brazilian Amazon extracts, in the luxury salons of the Middle East.",
       description: "",
       support: "Discover how to be part of it",
       secondaryCta: "",
@@ -31,7 +31,7 @@ export const homeContent: HomeContent = {
     ar: {
       eyebrow: "",
       title:
-        "قوة مستخلصات الأمازون البرازيلية في صالونات التجميل الفاخرة في الشرق الأوسط.",
+        "قوة مستخلصات الأمازون البرازيلية في صالونات الشرق الأوسط الفاخرة.",
       description: "",
       support: "اكتشف كيف تكون جزءًا من ذلك",
       secondaryCta: "",
@@ -46,23 +46,23 @@ export const homeContent: HomeContent = {
   businessModel: {
     en: {
       eyebrow: "Business Model",
-      title: "Lead the entry of American Magic Hair into the Middle East market.",
+      title: "A structured entry model for premium market expansion",
       intro:
-        "Structured for qualified partners ready to distribute, position, and expand the brand through premium beauty salon channels and premium pharmacy networks.",
+        "American Magic Hair is not positioned as a price-driven import opportunity. It is a premium market-entry model designed for operators who can build distribution, activate salon channels, and establish long-term brand value across the Middle East.",
       options: [
         {
           title: "Country or Regional Distribution Rights",
-          text: "For qualified importers, distributors, and operators seeking to lead the commercial development of the brand in a defined territory, with focus on premium salon penetration, controlled expansion, and long-term market positioning across the Middle East.",
+          text: "For qualified importers, distributors, and operators seeking to lead the commercial development of the brand in a defined territory, with focus on premium salon penetration, controlled expansion, and long-term market positioning.",
         },
         {
           title: "Strategic Market Development Partnership",
-          text: "For investors or business groups looking to build and expand American Magic Hair in the Middle East through premium beauty salon channels and premium pharmacy networks, with clear positioning and long-term brand value.",
+          text: "For investors or business groups looking to enter the Brazilian professional haircare category with a brand that offers clear positioning, scalable product logic, and stronger long-term value than generic short-cycle opportunities.",
         },
       ],
       authority:
-        "This is not a generic reseller offer. It is a structured brand-entry model for premium market expansion.",
+        "This is not a generic reseller offer. It is a brand-building market entry structure.",
       closing:
-        "Both models are designed for qualified partners with execution capacity, market vision, and commitment to building a premium brand presence across the Middle East.",
+        "Both models are designed for partners with execution capacity, market vision, and commitment to building a premium brand presence — not simply moving inventory.",
       primaryCta: "Request Investor Brief",
       secondaryCta: "Apply for Country Rights",
       storyHandle: "americanmagic_hair",
@@ -83,23 +83,23 @@ export const homeContent: HomeContent = {
     },
     ar: {
       eyebrow: "نموذج العمل",
-      title: "قيادة دخول American Magic Hair إلى سوق الشرق الأوسط.",
+      title: "نموذج دخول منظم للتوسع في السوق الفاخر",
       intro:
-        "مهيكل لشركاء مؤهلين مستعدين لتوزيع العلامة التجارية، وترسيخ مكانتها، وتوسيعها من خلال قنوات صالونات التجميل الفاخرة وشبكات الصيدليات الفاخرة.",
+        "لا يتم تقديم American Magic Hair كفرصة استيراد قائمة على السعر. بل هو نموذج دخول فاخر إلى السوق مصمم للمشغلين القادرين على بناء التوزيع، وتنشيط قنوات الصالونات، وتأسيس قيمة علامة تجارية طويلة الأمد في الشرق الأوسط.",
       options: [
         {
           title: "حقوق التوزيع الوطني أو الإقليمي",
-          text: "للمستوردين والموزعين والمشغلين المؤهلين الراغبين في قيادة التطوير التجاري للعلامة داخل منطقة محددة، مع التركيز على اختراق الصالونات الفاخرة، والتوسع المنضبط، والتموضع طويل الأمد في أسواق الشرق الأوسط.",
+          text: "للمستوردين والموزعين والمشغلين المؤهلين الراغبين في قيادة التطوير التجاري للعلامة داخل منطقة محددة، مع التركيز على الصالونات الفاخرة، والتوسع المنضبط، والتموضع طويل الأمد.",
         },
         {
           title: "شراكة استراتيجية لتطوير السوق",
-          text: "للمستثمرين أو المجموعات التجارية الراغبة في بناء وتوسيع American Magic Hair في الشرق الأوسط عبر قنوات صالونات التجميل الفاخرة وشبكات الصيدليات الفاخرة، مع تموضع واضح وقيمة طويلة الأمد للعلامة.",
+          text: "للمستثمرين أو المجموعات التجارية الراغبة في دخول فئة العناية البرازيلية الاحترافية بالشعر من خلال علامة تقدم تموضعًا واضحًا، ومنطقًا قابلاً للتوسع، وقيمة طويلة المدى أقوى من الفرص العامة قصيرة الدورة.",
         },
       ],
       authority:
-        "هذه ليست فرصة إعادة بيع عامة، بل هي نموذج منظم لدخول العلامة إلى السوق الفاخر.",
+        "هذه ليست فرصة إعادة بيع عامة، بل هي هيكل دخول إلى السوق لبناء علامة قوية.",
       closing:
-        "تم تصميم كلا النموذجين لشركاء مؤهلين لديهم قدرة فعلية على التنفيذ، ورؤية سوقية، والتزام ببناء حضور فاخر للعلامة في الشرق الأوسط.",
+        "تم تصميم كلا النموذجين لشركاء لديهم قدرة فعلية على التنفيذ، ورؤية سوقية، والتزام ببناء حضور فاخر للعلامة — وليس مجرد تحريك المخزون.",
       primaryCta: "اطلب ملف المستثمر",
       secondaryCta: "قدّم لحقوق الدولة",
       storyHandle: "americanmagic_hair",
