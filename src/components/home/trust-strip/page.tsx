@@ -15,7 +15,7 @@ const storyVideos = ["/botanic.mp4", "/kit.mp4", "/resultado.mp4"];
 const copy = {
   en: {
     eyebrow: "Business Model",
-    headline: "Lead the market entry of American Magic Hair in Saudi Arabia",
+    headline: "Lead the market entry of American Magic Hair in the Middle East",
     intro:
       "Structured for qualified partners ready to distribute, position, and scale the brand through premium salon channels.",
     primaryCta: "Request Investor Brief",
@@ -36,7 +36,7 @@ const copy = {
   },
   ar: {
     eyebrow: "نموذج العمل",
-    headline: "قد دخول أمريكان ماجيك هير إلى السوق السعودي",
+    headline: "قد دخول أمريكان ماجيك هير إلى سوق الشرق الأوسط",
     intro:
       "تم تصميم هذا النموذج لشركاء مؤهلين قادرين على التوزيع والتموضع وتوسيع العلامة عبر قنوات الصالونات الفاخرة.",
     primaryCta: "اطلب ملف المستثمر",

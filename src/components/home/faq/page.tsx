@@ -21,9 +21,9 @@ const copy = {
           "Because it provides a stronger introduction for the brand, with better visual perception, a clearer commercial proposition, and greater ability to open doors in premium salons.",
       },
       {
-        question: "Is this opportunity limited to Saudi Arabia?",
+        question: "Is this opportunity limited to the Middle East?",
         answer:
-          "The initial focus is Saudi Arabia, but the structure may be evaluated for other strategic Middle Eastern markets depending on partner profile and execution capacity.",
+          "The current structure is designed for the Middle East, and may be evaluated for specific strategic markets depending on partner profile and execution capacity.",
       },
       {
         question: "Is this proposal intended for common resellers?",
@@ -54,9 +54,9 @@ const copy = {
           "لأنه يقدم مدخلًا أقوى للعلامة، مع إدراك بصري أفضل، وطرح تجاري أوضح، وقدرة أكبر على فتح الأبواب داخل الصالونات الراقية.",
       },
       {
-        question: "هل هذه الفرصة مقتصرة على المملكة العربية السعودية؟",
+        question: "هل هذه الفرصة مقتصرة على الشرق الأوسط؟",
         answer:
-          "التركيز الأولي هو المملكة العربية السعودية، لكن يمكن تقييم الهيكل لأسواق استراتيجية أخرى في الشرق الأوسط وفقًا لملف الشريك وقدرته التنفيذية.",
+          "الهيكل الحالي مصمم لمنطقة الشرق الأوسط، ويمكن تقييم أسواق استراتيجية محددة وفقًا لملف الشريك وقدرته التنفيذية.",
       },
       {
         question: "هل هذا الطرح مخصص للبائعين التقليديين؟",
@@ -166,20 +166,9 @@ export default function FAQ({ locale = "en" }: FAQProps) {
                     <motion.div
                       animate={{ rotate: isOpen ? 45 : 0 }}
                       transition={{ duration: 0.35, ease }}
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-black/15"
+                      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-black/12 bg-black/[0.03]"
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="h-6 w-6"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M12 5v14" />
-                        <path d="M5 12h14" />
-                      </svg>
+                      <span className="text-[28px] leading-none text-[#b5963e]">+</span>
                     </motion.div>
                   </button>
 
@@ -192,9 +181,13 @@ export default function FAQ({ locale = "en" }: FAQProps) {
                     transition={{ duration: 0.4, ease }}
                     className="overflow-hidden"
                   >
-                    <div className={`px-6 pb-8 md:px-8 ${isArabic ? "text-right" : "text-left"}`}>
-                      <div className={`${isArabic ? "mr-[68px]" : "ml-[68px]"} max-w-[820px]`}>
-                        <p className="text-[17px] leading-[1.9] text-black/62 md:text-[18px]">
+                    <div
+                      className={`px-6 pb-8 md:px-8 ${
+                        isArabic ? "text-right" : "text-left"
+                      }`}
+                    >
+                      <div className="ml-[68px] border-l border-black/10 pl-6 md:ml-[76px] md:pl-7">
+                        <p className="max-w-[760px] text-[17px] leading-[1.95] text-black/66 md:text-[18px]">
                           {item.answer}
                         </p>
                       </div>
